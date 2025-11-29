@@ -59,6 +59,16 @@ parameters:
       type: string
     style: simple
 
+  macSecKey:
+    description: Resource ID segment making up resource `name`.
+    explode: false
+    in: path
+    name: macSecKey
+    required: true
+    schema:
+      type: string
+    style: simple
+
   alt:
     description: Data format for response.
     explode: true
