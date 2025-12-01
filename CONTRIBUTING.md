@@ -6,6 +6,7 @@ documentation, we greatly value feedback and contributions from our community.
 Please read through this document before submitting any issues or pull requests to ensure we have all the necessary
 information to effectively respond to your bug report or contribution.
 
+Also, please note that any and all contributions to this project are governed by the [GOVERNANCE MODEL](governance/GOVERANCE_MODEL.md).  Any requests for modification that do not meet the criteria as outlined there, will not be considered.
 
 ## Reporting Bugs/Feature Requests
 
@@ -48,10 +49,6 @@ Looking at the existing issues is a great way to find something to contribute on
 This project has adopted the [Amazon Open Source Code of Conduct](https://aws.github.io/code-of-conduct).
 For more information see the [Code of Conduct FAQ](https://aws.github.io/code-of-conduct-faq) or contact
 opensource-codeofconduct@amazon.com with any additional questions or comments.
-
-
-## Security issue notifications
-If you discover a potential security issue in this project we ask that you notify AWS/Amazon Security via our [vulnerability reporting page](http://aws.amazon.com/security/vulnerability-reporting/). Please do **not** create a public github issue.
 
 
 ## Licensing

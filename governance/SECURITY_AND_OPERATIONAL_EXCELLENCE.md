@@ -1,11 +1,11 @@
 # Security and Operational Excellence Policy
 
-This policy establishes the security and operational excellence requirements for the Cloud Connection Management API specification, which enables multicloud direct connections between cloud service providers. As an openly licensed specification under Apache 2.0, we encourage broad adoption and contribution from the cloud provider community.
+This policy establishes the security and operational excellence requirements for the Connection Coordinator API specification, which enables cross-provider direct connections between cloud service providers. As an openly licensed specification under Apache 2.0, we encourage broad adoption and contribution from the cloud provider community.
 
 To maintain the integrity, security, and reliability of implementations, we have established this policy to define minimum standards that all specification changes must adhere to. This ensures that while the specification remains open and adaptable, critical security and operational capabilities are preserved across all implementations.
 
 The primary goals of this policy are to:
-1.	Protect customer data traversing multicloud connections
+1.	Protect customer data traversing cross-provider connections
 2.	Ensure consistent security practices across all implementing cloud providers
 3.	Maintain operational reliability for mission-critical workloads
 4.	Provide clear guidance for contributors proposing specification changes

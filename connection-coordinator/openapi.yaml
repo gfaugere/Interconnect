@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   description: ""
-  title: Cloud Connection Management API
+  title: Connection Coordinator API Specification
   version: v1
 servers:
 - url: /
