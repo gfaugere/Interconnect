@@ -1,6 +1,6 @@
 # Connection Coordinator API
 
-This document is meant to be a supplement to the OpenAPI specification.  It's objective is to provide some clarity around the overall object hierarchy and what each item actually represents.
+This document is meant to be a supplement to the OpenAPI specification.  Its objective is to provide some clarity around the overall object hierarchy and what each item actually represents.
 
 ## Primary Object Types
 
@@ -8,7 +8,7 @@ This document is meant to be a supplement to the OpenAPI specification.  It's ob
 The base type of `provider` is used to delineate the respective CSP from which requests are being made.  For example, as Amazon, we would make requests toward partners using `/providers/aws` as our prefix.  This is used as a way of ensuring resource level permissions and isolation server side.
 
 ### Environment
-The `environment` object is used to uniquely describe connectivity between two partner CSPs into specific regions.  This is something that the customer would select when creating their connection and would distinctly identifiy the two regions that are being connected.
+The `environment` object is used to uniquely describe connectivity between two partner CSPs into specific regions.  This is something that the customer would select when creating their connection and would distinctly identify the two regions that are being connected.
 
 For example, a single `environment` could describe the generic path between (AWS us-east-1) and (GCP us-east4) and another could describe a path (AWS us-west-2) and (GCP us-west1).
 
@@ -88,7 +88,7 @@ For the purposes of a negotiation phase, one CSP is considered the "Negotiator" 
 
 ### Negotiation: Interconnect Selection
 
-The first step in the negotiate workflow is to select the appropriate `Interconnect`.  This value is proposed by effectively "creating" the `Connection` object as a resource underneath that proposed `Interconnect`. If this interconnect is not acceptable, then it should fail the creation with `409 CONFLICT`
+The first step in the negotiate workflow is to select the appropriate `Interconnect`.  This value is proposed by effectively "creating" the `Connection` object as a resource underneath that proposed `Interconnect`. If this interconnect is not acceptable, then it should fail the creation with `409 CONFLICT`.
 
 In general, the conflict result should only be used for cases in which the selected `Interconnect` cannot fit the required bandwidth.  This should only occur in cases where there is a race between the two sides (i.e. multiple creations at the same time started on separate CSPs).
 
@@ -120,7 +120,7 @@ The IPv4 and IPv6 details provide narrowing semantics around the BGP peering par
 
 Once the `FeatureGuidance` has been received, we can start to submit actual negotiation attempts for the L3 Configuration.  While the previous `FeatureGuidance` was requested once for the connection on all channels, the L3 Parameter negotiation is intended to be done on a per-channel basis as this is deemed overall to be more flexible than trying to use the same parameters across all channels.
 
-The process of creating a `Feature` involves quite literally creating a `Feature` object on the correspdoning `Connection`, using the `CreateFeature` operation.  A successful creation will elicit a 200 response.
+The process of creating a `Feature` involves quite literally creating a `Feature` object on the corresponding `Connection`, using the `CreateFeature` operation.  A successful creation will elicit a 200 response.
 
 If something is not quite right, then the responder should reject the configuration with `409 Conflict`.  Upon receiving the 409, the negotiator should restart this channel's workflow from the `FeatureGuidance` step above, making use of the form which includes query params channelId and featureType.
 
@@ -130,7 +130,7 @@ Once all desired features have been created, we can move onto provisioning the a
 
 With all Features in place and agreed upon, each CSP now looks to handle the necessary provisioning on their respective internal systems.  This operation is not necessarily guaranteed to be quick, and CSPs should be prepared as such.
 
-After local provisioning is complete, each CSP can indepdently move onto the final step, Activate Connection.
+After local provisioning is complete, each CSP can independently move onto the final step, Activate Connection.
 
 ## Activate Connection
 
